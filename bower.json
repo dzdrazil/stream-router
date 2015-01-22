@@ -1,0 +1,21 @@
+{
+  "name": "stream-router",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dzdrazil/stream-router",
+  "authors": [
+    "Dan Zdrazil <dzdrazil@gmail.com>"
+  ],
+  "description": "A stream-based router",
+  "main": "dist/main.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "kefir": "~0.5.3"
+  }
+}

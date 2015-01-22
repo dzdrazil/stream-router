@@ -1,0 +1,26 @@
+{
+  "name": "stream-router",
+  "version": "0.0.1",
+  "description": "A stream-based router using Kefir",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "6to5 main.es6 --out-file dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dzdrazil/stream-router.git"
+  },
+  "keywords": [
+    "Kefir"
+  ],
+  "author": "Dan Zdrazil <dzdrazil@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzdrazil/stream-router/issues"
+  },
+  "homepage": "https://github.com/dzdrazil/stream-router",
+  "devDependencies": {
+    "6to5": "~2.13.5"
+  }
+}

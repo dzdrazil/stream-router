@@ -1,0 +1,47 @@
+<script src="../bower_components/kefir/dist/kefir.js"></script>
+<script src="../main.js"></script>
+<stream-router id="router"></stream-router>
+<script>
+'use strict';
+var router = document.getElementById('router');
+
+document.addEventListener('DOMContentLoaded', function() {
+    // HOME route
+    var homeStream = router.onRoute('/:page');
+
+    homeStream
+        .onValue(function(args) {
+            if (args === null) return;
+            console.log('first /:page callback', args);
+        });
+
+    homeStream
+        .onValue(function(args) {
+            if (args === null) return;
+            console.log('other /:page callback', args);
+        });
+
+    // USER ROUTE
+    router
+        .onRoute('/user/:id')
+        .map(function(args) {
+            if (args === null) return;
+            return parseInt(args.id, 0);
+        })
+        .onValue(function(id) {
+            if (id === undefined) return;
+
+            console.log('matched user id: ', id);
+        });
+
+    router.start();
+});
+
+</script>
+
+Check your console after hitting these
+<br>
+<hr>
+<a href="#/about">About</a>
+<a href="#/home">Home</a>
+<a href="#/user/5">User 5</a>

@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "kefir": "~0.5.3"
+    "kefir": "~0.5.3",
+    "webcomponentsjs": "~0.5.3"
   }
 }
